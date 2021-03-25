@@ -88,10 +88,12 @@ var array1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 var array2 = [1, 2, 3, 4, 5];
 
-for(i = 0; i < array1.length; i++){
+for(i = 0; i < array1.length || i < array2.length; i++){
     var aggiungiElemento = Math.floor(Math.random()*10)+1;
     if(array2.length < array1.length){
-        array2.push(aggiungiElemento)
+        array2.push(aggiungiElemento);
+    }else if(array1.length < array2.length){
+        array1.push(aggiungiElemento);
     }
 }
 console.log(array1);
